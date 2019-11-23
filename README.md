@@ -16,7 +16,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|grpname|text|null: false|
+|grpname|string|null: false|
 |user_id|integer|null: false foreign_key: true|
 
 ### Association
