@@ -1,0 +1,16 @@
+.chat-side
+  .side-header
+    .side-header__box
+      .side-header__box__user-name
+        username
+      .side-header__box-menu
+        =link_to "#", class: "side-header__box-menu__edit-btn" do
+          = icon('fas', 'edit')
+        =link_to "#", class: "side-header__box-menu__cog-btn" do
+          = icon('fas', 'cog')
+  .groups
+    .group
+      .group__group-name
+        test1
+      .group__latest-message
+        まだメッセージがありません
