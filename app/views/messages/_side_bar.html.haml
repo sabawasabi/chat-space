@@ -3,12 +3,12 @@
     .chat-side
       .side-header
         .side-header__box
-          .side-header__user-name
+          .side-header__box__user-name
             username
           .side-header__box-menu
-            =link_to "#", class: "side-header__edit-btn" do
+            =link_to "#", class: "side-header__box-menu__edit-btn" do
               = icon('fas', 'edit')
-            =link_to "#", class: "side-header__cog-btn" do
+            =link_to "#", class: "side-header__box-menu__cog-btn" do
               = icon('fas', 'cog')
       .groups
         .group
