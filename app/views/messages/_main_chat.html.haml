@@ -8,19 +8,21 @@
     =link_to "#", class: "main-header__edit-btn" do
       Edit
   .messages
-    .message
-      .message__upper-info
-        .message__upper-info__talker
-          username
-        .message__upper-info__date
-          2019/12/01(Sun) 00:00:00
-      .message__text
-        this is a first message
+    = render @messages
+  
   .form
-    .new_message
+    = form_for [@group, @message], class:"new_message" do |f|
       .input-box
-        %input{placeholder:"type a message", class: "input-box__text"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", value: "Send", class: "submit-btn"}
+        = f.text_field :body, class: 'input-box__text', placeholder: 'type a message'
+        .input-box__image
+          = f.label :image do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
+    -# .new_message
+    -#   .input-box
+    -#     %input{placeholder:"type a message", class: "input-box__text"}
+    -#     %label{class: "input-box__image"}
+    -#       = icon('fas', 'image')
+    -#       %input{type: "file", class: "input-box__image__file"}
+    -#   %input{type: "submit", value: "Send", class: "submit-btn"}
