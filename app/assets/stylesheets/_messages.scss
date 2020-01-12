@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   display: flex;
 
@@ -109,6 +113,7 @@
       padding: 46px 40px;
       background-color: #fafafa;
       box-sizing: border-box;
+      overflow: scroll;
     }
 
       .message {
