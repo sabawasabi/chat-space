@@ -59,7 +59,8 @@ $(function(){
       $('.submit-btn').prop('disabled', false);
     })
     .fail(function() {
-      alert("メッセージ送信に失敗しました");
+      alert("メッセージを入力してください");
+      $('.submit-btn').prop('disabled', false);
     });
   })
   var reloadMessages = function() {
@@ -84,6 +85,7 @@ $(function(){
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+      $('.submit-btn').prop('disabled', false);
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
