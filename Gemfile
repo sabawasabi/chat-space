@@ -65,7 +65,7 @@ gem 'font-awesome-sass'
 gem 'devise'
 
 # Image Uploader
-gem 'carrierwave'
+# gem 'carrierwave'
 gem 'fog-aws'
 
 gem 'mini_magick'
